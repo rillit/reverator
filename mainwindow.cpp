@@ -83,9 +83,10 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_buttoncommit_clicked()
 {
     QString cmd;
-    cmd = 'git commit -m "' + ui->gitcomment->text() + '"';
-    proc->start(cmd);
-    ui->textBrowser->append(proc->readAllStandardOutput());
-    ui->textBrowser->append("file committed");
-    ui->gitaddfile->clear();
+    cmd = "git commit -m '" + ui->gitcomment->text() + "'";
+    //proc->start(cmd);
+    //ui->textBrowser->append(proc->readAllStandardOutput());
+    //ui->textBrowser->append("file committed");
+    ui->gitcomment->clear();
+    ui->textBrowser->append(cmd);
 }
